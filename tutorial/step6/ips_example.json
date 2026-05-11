@@ -1,0 +1,321 @@
+{
+  "resourceType": "Bundle",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips"
+    ]
+  },
+  "identifier": {
+    "system": "urn:oid:2.16.840.1.113883.3.72",
+    "value": "7e630ded-fc12-4ad7-b095-b526e0acf56c"
+  },
+  "type": "document",
+  "timestamp": "2026-05-11T18:01:47.700+00:00",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:f8bf8d41-68ff-4f8b-a560-401e8b3ac3cc",
+      "resource": {
+        "resourceType": "Composition",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips"
+          ]
+        },
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "60591-5",
+              "display": "Patient summary Document"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/360eb9d9-9cd7-4a9b-b782-9e774fa92951"
+        },
+        "date": "2026-05-11T18:01:47+00:00",
+        "author": [
+          {
+            "display": "openFHIR"
+          }
+        ],
+        "title": "Patient Summary",
+        "section": [
+          {
+            "title": "Active Problems",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "11450-4",
+                  "display": "Problem list Reported"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Hot flushes</div>"
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:587aea5e-104b-4806-9f0e-a40079643177"
+              },
+              {
+                "reference": "urn:uuid:b8e22de5-e3bd-4852-9c34-ac537d1dfc79"
+              }
+            ]
+          },
+          {
+            "title": "Active Allergies and Intolerances",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "48765-2",
+                  "display": "Allergies and Intolerances"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Hot flushes</div>"
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:474c54eb-5989-4172-b20a-f6dab5501206"
+              },
+              {
+                "reference": "urn:uuid:f37f46b2-08b5-4e9e-bf8e-9c277fbb2bd2"
+              }
+            ]
+          },
+          {
+            "title": "Active Medication List",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "10160-0",
+                  "display": "Medication List"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Hot flushes</div>"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:587aea5e-104b-4806-9f0e-a40079643177",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "severity": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "6736007",
+              "display": "Moderate"
+            }
+          ],
+          "text": "Moderate"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "11687002",
+              "display": "Gestational diabetes mellitus"
+            }
+          ],
+          "text": "Gestational diabetes mellitus"
+        },
+        "subject": {
+          "reference": "urn:uuid:7038eb40-56b0-450e-8394-ecd58a7a3d30"
+        },
+        "onsetDateTime": "2025-08-27T22:00:00+00:00"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b8e22de5-e3bd-4852-9c34-ac537d1dfc79",
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "severity": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "255604002",
+              "display": "Mild"
+            }
+          ],
+          "text": "Mild"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "271737000",
+              "display": "Anemia"
+            }
+          ],
+          "text": "Anemia"
+        },
+        "subject": {
+          "reference": "urn:uuid:7038eb40-56b0-450e-8394-ecd58a7a3d30"
+        },
+        "onsetDateTime": "2025-08-27T22:00:00+00:00"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:474c54eb-5989-4172-b20a-f6dab5501206",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "417930000",
+              "display": "Allergy to adhesive agent"
+            }
+          ],
+          "text": "Allergy to adhesive agent"
+        },
+        "patient": {
+          "reference": "urn:uuid:7038eb40-56b0-450e-8394-ecd58a7a3d30"
+        },
+        "onsetDateTime": "2008-03-04T23:00:00+00:00",
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "418363000",
+                    "display": "418363000"
+                  }
+                ],
+                "text": "418363000"
+              }
+            ],
+            "severity": "moderate"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f37f46b2-08b5-4e9e-bf8e-9c277fbb2bd2",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "91936005",
+              "display": "Allergy to penicillin"
+            }
+          ],
+          "text": "Allergy to penicillin"
+        },
+        "patient": {
+          "reference": "urn:uuid:7038eb40-56b0-450e-8394-ecd58a7a3d30"
+        },
+        "onsetDateTime": "1998-06-22T22:00:00+00:00",
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "39579001",
+                    "display": "39579001"
+                  }
+                ],
+                "text": "39579001"
+              }
+            ],
+            "severity": "severe"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -10,8 +10,13 @@ Once you have it, place it in a .secret subfolder of this workspace (root, not s
 
 ## Docker compose
 
-This is a first step of the tutorial where we also start building our complete docker-compose file.
-The [docker-compose.yml](docker-compose.yml) you see on the step1 folder is what your docker compose should contain at
+Throughout this tutorial you will maintain a single `docker-compose.yml` file in the **root of this repository** (not
+inside any step folder). Each step adds services or config to that file. The `docker-compose.yml` inside each step
+folder is a reference snapshot showing what yours should look like at the end of that step.
+
+All `docker compose` commands should be run from the **repo root**.
+
+The [docker-compose.yml](docker-compose.yml) you see in the step1 folder is what your docker-compose should contain at
 the end of this step.
 
 ### MongoDB
@@ -69,14 +74,34 @@ configure persistence parameters, see [appsettings.json](appsettings.json)
     volumes:
       - ./../../.secret/firelyserver-license.json:/app/firely-license.json
       - ./appsettings.json:/app/appsettings.json:ro
+      - vonk-imported:/app/vonk-imported
     depends_on:
       mongodb:
         condition: service_healthy
  ```
+
+The `vonk-imported` named volume persists Firely Server's conformance resource import history across container
+recreations. Without it, Firely re-imports all conformance resources on every restart, adding ~5 minutes to startup.
+Add it to the `volumes` section at the bottom of your compose file:
+
+```yaml
+volumes:
+  mongodb-data:
+  vonk-imported:
+```
 
 ## Assertion of the Step 1
 
 You can see if you've sucessfully set up Firely Server by going to http://localhost:4080/metadata in a browser or in
 your prefered REST testing application (i.e. Postman, Bruno, ..).
 
-Additionally, you're welcome to compare your docker-compose.yml file with [docker-compose.yml](docker-compose.yml)
+Do note that initial boot of Firely Server takes a while to load all conformance resources (~5 min). If you're getting
+an OpeartionOutcome with 423 Locked, feel free to move on to Step 2 and revisit this `assertion` after some time.
+
+Additionally, you're welcome to compare your docker-compose.yml file with [docker-compose.yml](docker-compose.yml).
+
+Run all commands from the repo root:
+
+```bash
+docker compose up -d
+```

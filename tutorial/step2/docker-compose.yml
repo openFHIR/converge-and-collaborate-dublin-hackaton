@@ -7,6 +7,7 @@ services:
       - ./../../.secret/firelyserver-license.json:/app/firely-license.json
       - ./appsettings.json:/app/appsettings.json:ro
       - ./../../.plugins:/app/plugins:ro
+      - vonk-imported:/app/vonk-imported
     depends_on:
       mongodb:
         condition: service_healthy
@@ -29,3 +30,4 @@ services:
 
 volumes:
   mongodb-data:
+  vonk-imported:

@@ -77,7 +77,13 @@ appsettings.json:
 
 ## Assertion of the Step 2
 
-After restarting Firely Server (`docker compose up -d --force-recreate firely`), check the container logs:
+After applying the changes, restart Firely Server from the **repo root**:
+
+```bash
+docker compose restart firely
+```
+
+Check the container logs:
 
 ```bash
 docker compose logs firely | grep -i "OpenFhir"

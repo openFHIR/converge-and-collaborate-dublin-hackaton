@@ -8,6 +8,7 @@ services:
       - ./appsettings.json:/app/appsettings.json:ro
       - ./cdrs.yml:/app/cdrs.yml:ro
       - ./../../.plugins:/app/plugins:ro
+      - vonk-imported:/app/vonk-imported
     depends_on:
       mongodb:
         condition: service_healthy
@@ -45,3 +46,4 @@ services:
 
 volumes:
   mongodb-data:
+  vonk-imported:

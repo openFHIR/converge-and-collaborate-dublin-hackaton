@@ -6,7 +6,7 @@ by bootstrapping them or by provisioning them through a RESTful API (https://ope
 ## Bootstrapping openFHIR State
 
 [fhirconnect](../../fhirconnect) subdirectory already includes all existing IPS mappings. The only thing we need to do
-is mount this subdirectory to the configured bootstrap location ot our openFHIR container and restart the engine.
+is mount this subdirectory to the configured bootstrap location ot our openFHIR container and recreate the container (restart the engine).
 
 Engine will scan this directory and provision all FHIRConnect mappings in there. Add the following under `volumes`
 
@@ -14,7 +14,13 @@ Engine will scan this directory and provision all FHIRConnect mappings in there.
   - ./../../fhirconnect/:/app/bootstrap/
 ```
 
-and restart the engine. You should see in the startup log that these files are being provisioned.
+then recreate the openFHIR container from the **repo root**, so it picks up the new volume mount and restarts the engine:
+
+```bash
+docker compose up -d openfhir
+```
+
+You should see in the startup log that these files are being provisioned.
 
 ## Assertion of Step 5
 

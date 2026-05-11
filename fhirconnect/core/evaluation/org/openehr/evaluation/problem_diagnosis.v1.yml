@@ -45,9 +45,87 @@ mappings:
 
   - name: "severity"
     with:
-      fhir: "$resource.severity"
+      fhir: "$resource.severity.coding"
       openehr: "$archetype/data[at0001]/items[at0005]"
+    manual:
+      - name: "mild"
+        openehr:
+          - path: "defining_code/terminology_id"
+            value: "local"
+          - path: "defining_code/code_string"
+            value: "at0047"
+          - path: "value"
+            value: "Mild"
+        fhirCondition:
+          targetRoot: "$fhirRoot"
+          targetAttribute: "code"
+          operator: "one of"
+          criteria: "mild"
+        fhir:
+          - path: "code"
+            value: "mild"
+          - path: "system"
+            value: "http://terminology.hl7.org/CodeSystem/condition-severity"
+          - path: "display"
+            value: "Mild"
+        openehrCondition:
+          targetRoot: "$archetype/data[at0001]/items[at0005]"
+          targetAttribute: "defining_code/code_string"
+          operator: "one of"
+          criteria: "at0047"
 
+      - name: "moderate"
+        openehr:
+          - path: "defining_code/terminology_id"
+            value: "local"
+          - path: "defining_code/code_string"
+            value: "at0048"
+          - path: "value"
+            value: "Moderate"
+        fhirCondition:
+          targetRoot: "$fhirRoot"
+          targetAttribute: "code"
+          operator: "one of"
+          criteria: "moderate"
+        fhir:
+          - path: "code"
+            value: "moderate"
+          - path: "system"
+            value: "http://terminology.hl7.org/CodeSystem/condition-severity"
+          - path: "display"
+            value: "Moderate"
+        openehrCondition:
+          targetRoot: "$archetype/data[at0001]/items[at0005]"
+          targetAttribute: "defining_code/code_string"
+          operator: "one of"
+          criteria: "at0048"
+
+      - name: "severe"
+        openehr:
+          - path: "defining_code/terminology_id"
+            value: "local"
+          - path: "defining_code/code_string"
+            value: "at0049"
+          - path: "value"
+            value: "Severe"
+        fhirCondition:
+          targetRoot: "$fhirRoot"
+          targetAttribute: "code"
+          operator: "one of"
+          criteria: "severe"
+        fhir:
+          - path: "code"
+            value: "severe"
+          - path: "system"
+            value: "http://terminology.hl7.org/CodeSystem/condition-severity"
+          - path: "display"
+            value: "Severe"
+        openehrCondition:
+          targetRoot: "$archetype/data[at0001]/items[at0005]"
+          targetAttribute: "defining_code/code_string"
+          operator: "one of"
+          criteria: "at0049"
+          
   - name: "contextStartTime"
     with:
       fhir: "$resource.recordedDate"

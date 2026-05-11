@@ -33,7 +33,8 @@ runnable at the end of each step. Follow the README in each subfolder.
 | 3 | openFHIR running locally | [tutorial/step3](tutorial/step3/) |
 | 4 | All services wired together — Firely → openFHIR → openEHR CDR | [tutorial/step4](tutorial/step4/) |
 | 5 | Existing IPS FHIRConnect mappings bootstrapped into openFHIR | [tutorial/step5](tutorial/step5/) |
-| 6 | New FHIRConnect mappings for the IPS Medical Devices section | [tutorial/step6](tutorial/step6/) |
+| 6 | Create a patient, ingest an IPS Bundle, test existing mappings end-to-end | [tutorial/step6](tutorial/step6/) |
+| 7 | New FHIRConnect mappings for the IPS Medical Devices section | [tutorial/step7](tutorial/step7/) |
 
 ### Repository Structure
 
