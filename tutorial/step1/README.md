@@ -6,8 +6,7 @@ Download an evaluation license from Firely website: Request a trial license at h
 
 You'll receive it in a mail in a minute or two and it is a prerequisite for our next step.
 
-Once you have it, place it in a .secret subfolder of this workspace (root, not step1 folder) and rename it to
-`firely-license.json` if needed.
+Once you have it, place it in a .secret subfolder of this workspace (root, not step1 folder).
 
 ## Docker compose
 
@@ -68,7 +67,7 @@ configure persistence parameters, see [appsettings.json](appsettings.json)
     ports:
       - "4080:4080"
     volumes:
-      - ./../../.secret/firely-license.json:/app/firely-license.json
+      - ./../../.secret/firelyserver-license.json:/app/firely-license.json
       - ./appsettings.json:/app/appsettings.json:ro
     depends_on:
       mongodb:

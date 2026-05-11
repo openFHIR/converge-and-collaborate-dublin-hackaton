@@ -4,7 +4,7 @@ services:
     ports:
       - "4080:4080"
     volumes:
-      - ./../../.secret/firely-license.json:/app/firely-license.json
+      - ./../../.secret/firelyserver-license.json:/app/firely-license.json
       - ./appsettings.json:/app/appsettings.json:ro
       - ./../../.plugins:/app/plugins:ro
     depends_on:
