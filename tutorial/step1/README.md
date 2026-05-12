@@ -37,6 +37,11 @@ Add the following container in your docker compose file
       - MONGO_INITDB_ROOT_PASSWORD=admin
     volumes:
       - mongodb-data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
 ```
 
 ### Firely Server
