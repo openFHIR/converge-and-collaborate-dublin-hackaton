@@ -87,7 +87,8 @@ an openEHR flow of data.
 
 ### Applying plugin configuration for openEHR CDRs
 
-The following goes to appsettings.instance.json. Be aware of the root key being OpenFhirPlugin
+The following goes to appsettings.instance.json. Be aware of the root key being OpenFhirPlugin (so the same root you've probably
+added before already when adding OpenFhir endpoints - don't add it twice)
 
 ```yaml
 "OpenFhirPlugin": {

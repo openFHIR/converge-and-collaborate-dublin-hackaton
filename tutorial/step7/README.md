@@ -3,8 +3,6 @@
 In this step you will write FHIRConnect mappings for the IPS Medical Devices section, which was not covered by the
 existing mappings provisioned in Step 5.
 
-The full field-level mapping is specified in [`../step6/Medica_ Devices.csv`](../step6/Medica_%20Devices.csv).
-
 ## Background
 
 The target FHIR resources are `DeviceUseStatement` and `Device` (IPS profile: `DeviceUseStatement-uv-ips`).

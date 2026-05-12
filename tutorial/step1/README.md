@@ -49,7 +49,8 @@ Add the following container in your docker compose file
 ### Firely Server
 
 Now we can set up our Firely Server. For this to work, we require 2 files in the `config/` folder inside `tutorial/workspace/`:
-(1) `appsettings.instance.json` 
+
+(1) `appsettings.instance.json`  
 (2) `firely-license.json` — your trial license from above
 
 #### appsettings
@@ -88,11 +89,6 @@ Create it with sections below and place it in the `config/` folder. You can comp
         condition: service_healthy
  ```
 
-The entire `config/` folder is mounted to `/app/config/` inside the container. `VONK_PATH_TO_SETTINGS` points Firely
-at that directory, where it looks for `appsettings.instance.json` — this avoids the Windows Docker issue of
-bind-mounting individual files. The provided `appsettings.instance.json` already references the license at
-`/app/config/firely-license.json`.
-
 The `./vonk-imported` bind mount persists Firely Server's conformance resource import history across container
 recreations. Without it, Firely re-imports all conformance resources on every restart, adding ~5 minutes to startup.
 
@@ -110,6 +106,12 @@ New-Item -ItemType Directory -Force -Path vonk-imported
 
 Run these from the `tutorial/workspace/` directory.
 
+Finally, set everything up by running from the `tutorial/workspace/` directory:
+
+```bash
+docker compose up -d
+```
+
 ## Assertion of the Step 1
 
 You can see if you've sucessfully set up Firely Server by going to http://localhost:4080/metadata in a browser or in
@@ -120,8 +122,3 @@ an OpeartionOutcome with 423 Locked, feel free to move on to Step 2 and revisit 
 
 Additionally, you're welcome to compare your docker-compose.yml file with [docker-compose.yml](docker-compose.yml).
 
-Run from the `tutorial/workspace/` directory:
-
-```bash
-docker compose up -d
-```

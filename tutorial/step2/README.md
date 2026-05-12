@@ -76,7 +76,7 @@ appsettings.instance.json:
 
 ## Assertion of the Step 2
 
-After applying the changes, restart Firely Server from the **`tutorial/workspace/` directory**:
+After applying the changes, recreate Firely Server from the **`tutorial/workspace/` directory**:
 
 ```bash
 docker compose up firely --force-recreate

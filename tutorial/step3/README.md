@@ -12,7 +12,7 @@ What we need first is a local instance of openFHIR to connect to.
 openFHIR can be run locally as a docker container and leverage existing MongoDB we've already setup for Firely Server to store mappings.
 
 Add the section below to your `docker-compose.yml` in the **`tutorial/workspace/` directory**, then run `docker compose up -d` from there.
-This will start openFHIR alongside the already-running services without recreating them.
+
 
 ```yaml
   openfhir:
