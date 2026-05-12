@@ -91,6 +91,8 @@ an openEHR flow of data.
 
 ### Applying plugin configuration for openEHR CDRs
 
+The following goes to appsettings.json. Be aware of the root key being OpenFhirPlugin
+
 ```yaml
 "OpenFhirPlugin": {
   "Interceptor": {
@@ -132,7 +134,7 @@ an openEHR flow of data.
 ## $summary operation
 
 Firely Server requires one additional configuration to enable the `$summary` operation, for which you need to add the
-following
+following to appsettings.json (under base appsettings.json)
 
 ```yaml
 "Operations": {
