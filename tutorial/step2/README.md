@@ -10,8 +10,7 @@ this session, you can find the .dll files in this project as well.
 
 ## Installing the plugin
 
-The `.plugins` folder inside `tutorial/workspace/` already contains the two required DLL files
-([OpenFhirFirelyPlugin.dll](OpenFhirFirelyPlugin.dll), [YamlDotNet.dll](YamlDotNet.dll)) — no copying needed.
+Move the two .dll files you find in this step to a folder inside `tutorial/workspace/.plugins`.
 
 We need to make sure Firely Server picks them up by mounting the `.plugins` folder into the container.
 Add the following under the `firely` service's `volumes` in your `docker-compose.yml`:
