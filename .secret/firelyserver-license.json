@@ -2,7 +2,7 @@
   "LicenseOptions": {
     "Kind": "Evaluation",
     "LicenseVersion": "2",
-    "ValidUntil": "2026-05-12",
+    "ValidUntil": "2026-05-19",
     "Licensee": "gasper@fire.ly",
     "Plugins": [
       "http://fire.ly/server/edition/firely-scale",
@@ -66,5 +66,5 @@
       "http://fire.ly/firely-validator"
     ]
   },
-  "Signature": "W5hNaMbu7hOJert96nzyJVxdifeeovsmlo+cW9oqtUI5Eo3q8wa71nOsokO4CqulHiUKW5kjYx2eFy5cr9LDkHyzZx90q+/g/2PQ5W4de6NwiPa/Y+PYCpnzY2CY8fv0vvG+Nv3H6mcrBCYKVKrORKBwTK38nV40JCe30qCpyZM="
+  "Signature": "dqWl9P94NfkL4ee3gbVHE8W+ZuUhAEfdSZttIE62ZuT/qy41ITsAV+m5wu7I6lwm/pWL5W2KeGXQJNmyRt6oLDFsBScd2U9f4PEaQSA9oOw2I6foPAMGOrCXSaY/DDLiaA41OMNpthpajNPtxxzPEucwjwbtuU+EQxGUrW0pJOg="
 }
